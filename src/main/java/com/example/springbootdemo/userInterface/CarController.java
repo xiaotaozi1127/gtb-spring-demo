@@ -26,7 +26,6 @@ public class CarController {
     private final CarService carService;
 
 //    Logger log = LoggerFactory.getLogger(CarController.class);
-
 //    Logger log = LoggerFactory.getLogger(CarController.class);
 
     public CarController(CarService carService) {
