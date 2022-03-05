@@ -1,0 +1,99 @@
+09:27:07.990 [main] INFO  c.e.s.SpringbootdemoApplication - Starting SpringbootdemoApplication using Java 11.0.13 on huis-MacBook-Pro.local with PID 97689 (/Users/htao/projects/taohui/gtb/spring-mvc/springbootdemo/build/classes/java/main started by htao in /Users/htao/projects/taohui/gtb/spring-mvc/springbootdemo)
+09:27:07.993 [main] INFO  c.e.s.SpringbootdemoApplication - No active profile set, falling back to 1 default profile: "default"
+09:27:08.611 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+09:27:08.617 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+09:27:08.617 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+09:27:08.617 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.58]
+09:27:08.662 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+09:27:08.662 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 635 ms
+09:27:08.909 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+09:27:08.932 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+09:27:08.941 [main] INFO  c.e.s.SpringbootdemoApplication - Started SpringbootdemoApplication in 1.221 seconds (JVM running for 6.935)
+09:27:23.948 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+09:27:23.949 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+09:27:23.950 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+09:27:24.043 [http-nio-8080-exec-1] INFO  c.e.s.userInterface.CarController - car request = {"id":3,"name":"hongqi","color":"green"}
+09:27:24.057 [http-nio-8080-exec-1] INFO  c.e.s.userInterface.CarController - start process...
+09:27:24.058 [http-nio-8080-exec-1] WARN  c.e.s.userInterface.CarController - memory is running out...
+09:27:24.058 [http-nio-8080-exec-1] ERROR c.e.s.userInterface.CarController - process will be terminated...
+09:32:33.123 [main] INFO  c.e.s.SpringbootdemoApplication - Starting SpringbootdemoApplication using Java 11.0.13 on huis-MacBook-Pro.local with PID 649 (/Users/htao/projects/taohui/gtb/spring-mvc/springbootdemo/build/classes/java/main started by htao in /Users/htao/projects/taohui/gtb/spring-mvc/springbootdemo)
+09:32:33.125 [main] INFO  c.e.s.SpringbootdemoApplication - No active profile set, falling back to 1 default profile: "default"
+09:32:33.776 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+09:32:33.782 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+09:32:33.783 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+09:32:33.783 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.58]
+09:32:33.831 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+09:32:33.831 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 677 ms
+09:32:34.104 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+09:32:34.122 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+09:32:34.132 [main] INFO  c.e.s.SpringbootdemoApplication - Started SpringbootdemoApplication in 1.266 seconds (JVM running for 6.906)
+09:32:43.683 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+09:32:43.684 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+09:32:43.684 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+09:32:43.763 [http-nio-8080-exec-2] INFO  c.e.s.userInterface.CarController - car request = {"id":3,"name":"hongqi","color":"green"}
+09:32:43.763 [http-nio-8080-exec-2] INFO  c.e.s.userInterface.CarController - start process...
+09:32:43.764 [http-nio-8080-exec-2] WARN  c.e.s.userInterface.CarController - memory is running out...
+09:32:43.764 [http-nio-8080-exec-2] ERROR c.e.s.userInterface.CarController - process will be terminated...
+21:05:47.585 [main] INFO  c.e.s.SpringbootdemoApplication - Starting SpringbootdemoApplication using Java 11.0.13 on huis-MacBook-Pro.local with PID 93056 (/Users/htao/projects/taohui/gtb/spring-mvc/springbootdemo/build/classes/java/main started by htao in /Users/htao/projects/taohui/gtb/spring-mvc/springbootdemo)
+21:05:47.587 [main] INFO  c.e.s.SpringbootdemoApplication - No active profile set, falling back to 1 default profile: "default"
+21:05:48.294 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+21:05:48.300 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+21:05:48.300 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+21:05:48.300 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.58]
+21:05:48.360 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+21:05:48.361 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 746 ms
+21:05:48.685 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+21:05:48.712 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+21:05:48.723 [main] INFO  c.e.s.SpringbootdemoApplication - Started SpringbootdemoApplication in 1.414 seconds (JVM running for 7.076)
+21:06:42.454 [Test worker] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.springbootdemo.SpringbootdemoApplicationTests], using SpringBootContextLoader
+21:06:42.461 [Test worker] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.example.springbootdemo.SpringbootdemoApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+21:06:42.462 [Test worker] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.springbootdemo.SpringbootdemoApplicationTests]: SpringbootdemoApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+21:06:42.533 [Test worker] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.example.springbootdemo.SpringbootdemoApplication for test class com.example.springbootdemo.SpringbootdemoApplicationTests
+21:06:42.603 [Test worker] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+21:06:42.614 [Test worker] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@4287d447, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@3af37506, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@4e6d7365, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@7c0da600, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@d4602a, org.springframework.test.context.support.DirtiesContextTestExecutionListener@21ae6e73, org.springframework.test.context.event.EventPublishingTestExecutionListener@47dd778, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@15515c51, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@36a7abe1, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@64a896b0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@e044b4a, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@11a82d0f, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@1adb7478]
+21:06:47.865 [Test worker] INFO  c.e.s.SpringbootdemoApplicationTests - Starting SpringbootdemoApplicationTests using Java 11.0.13 on huis-MacBook-Pro.local with PID 93550 (started by htao in /Users/htao/projects/taohui/gtb/spring-mvc/springbootdemo)
+21:06:47.866 [Test worker] INFO  c.e.s.SpringbootdemoApplicationTests - No active profile set, falling back to 1 default profile: "default"
+21:06:48.990 [Test worker] INFO  c.e.s.SpringbootdemoApplicationTests - Started SpringbootdemoApplicationTests in 6.346 seconds (JVM running for 7.617)
+21:12:31.431 [main] INFO  c.e.s.SpringbootdemoApplication - Starting SpringbootdemoApplication using Java 11.0.13 on huis-MacBook-Pro.local with PID 96719 (/Users/htao/projects/taohui/gtb/spring-mvc/springbootdemo/build/classes/java/main started by htao in /Users/htao/projects/taohui/gtb/spring-mvc/springbootdemo)
+21:12:31.434 [main] INFO  c.e.s.SpringbootdemoApplication - No active profile set, falling back to 1 default profile: "default"
+21:12:32.764 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+21:12:32.774 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+21:12:32.774 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+21:12:32.775 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.58]
+21:12:32.862 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+21:12:32.862 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1382 ms
+21:12:33.301 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+21:12:33.342 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+21:12:33.351 [main] INFO  c.e.s.SpringbootdemoApplication - Started SpringbootdemoApplication in 2.312 seconds (JVM running for 8.11)
+21:17:31.402 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+21:17:31.405 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+21:17:31.415 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 9 ms
+11:53:31.735 [main] INFO  c.e.s.SpringbootdemoApplication - Starting SpringbootdemoApplication using Java 11.0.13 on huis-MacBook-Pro.local with PID 39011 (/Users/htao/projects/taohui/gtb/spring-mvc/springbootdemo/build/classes/java/main started by htao in /Users/htao/projects/taohui/gtb/spring-mvc/springbootdemo)
+11:53:31.738 [main] INFO  c.e.s.SpringbootdemoApplication - No active profile set, falling back to 1 default profile: "default"
+11:53:32.337 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+11:53:32.344 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+11:53:32.345 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+11:53:32.345 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.58]
+11:53:32.409 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+11:53:32.409 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 639 ms
+11:53:32.656 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+11:53:32.692 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+11:53:32.703 [main] INFO  c.e.s.SpringbootdemoApplication - Started SpringbootdemoApplication in 1.254 seconds (JVM running for 7.504)
+11:55:05.995 [main] INFO  c.e.s.SpringbootdemoApplication - Starting SpringbootdemoApplication using Java 11.0.13 on huis-MacBook-Pro.local with PID 39767 (/Users/htao/projects/taohui/gtb/spring-mvc/springbootdemo/build/classes/java/main started by htao in /Users/htao/projects/taohui/gtb/spring-mvc/springbootdemo)
+11:55:05.997 [main] INFO  c.e.s.SpringbootdemoApplication - No active profile set, falling back to 1 default profile: "default"
+11:55:06.665 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+11:55:06.673 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+11:55:06.674 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+11:55:06.674 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.58]
+11:55:06.732 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+11:55:06.732 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 706 ms
+11:55:07.024 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+11:55:07.044 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+11:55:07.054 [main] INFO  c.e.s.SpringbootdemoApplication - Started SpringbootdemoApplication in 1.339 seconds (JVM running for 7.062)
+11:55:16.894 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+11:55:16.897 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+11:55:16.897 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+11:55:25.345 [http-nio-8080-exec-3] INFO  c.e.s.userInterface.CarController - car request = {"id":3,"name":"hongqi","color":"green"}
+11:55:25.345 [http-nio-8080-exec-3] INFO  c.e.s.userInterface.CarController - start process...
+11:55:25.345 [http-nio-8080-exec-3] WARN  c.e.s.userInterface.CarController - memory is running out...
+11:55:25.345 [http-nio-8080-exec-3] ERROR c.e.s.userInterface.CarController - process will be terminated...
