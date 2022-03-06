@@ -2,6 +2,7 @@ package com.example.springbootdemo.application;
 
 import com.example.springbootdemo.Domain.Car;
 import com.example.springbootdemo.infrastructure.CarRepository;
+import com.example.springbootdemo.userInterface.exception.CarNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -27,7 +28,8 @@ public class CarServiceImpl implements CarService {
 
     @Override
     public Car findById(Long id) {
-        return carRepository.getById(id);
+        return carRepository.findById(id)
+                .orElseThrow(() -> new CarNotFoundException("cannot find car by id: " + id));
     }
 
     @Override

@@ -5,9 +5,7 @@ import com.example.springbootdemo.application.CarService;
 import com.example.springbootdemo.userInterface.dto.request.CarRequest;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-
 import lombok.extern.slf4j.Slf4j;
-import org.apache.logging.log4j.core.config.plugins.validation.constraints.Required;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
