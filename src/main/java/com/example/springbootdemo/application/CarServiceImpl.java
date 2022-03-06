@@ -17,12 +17,12 @@ public class CarServiceImpl implements CarService {
 
     @Override
     public List<Car> findAll() {
-        return carRepository.getAllCars();
+        return carRepository.findAll();
     }
 
     @Override
     public void addCar(Car car) {
-        carRepository.addCar(car);
+        carRepository.save(car);
     }
 
     @Override
@@ -32,6 +32,6 @@ public class CarServiceImpl implements CarService {
 
     @Override
     public List<Car> findByColor(String color) {
-        return carRepository.getByColor(color);
+        return null;
     }
 }

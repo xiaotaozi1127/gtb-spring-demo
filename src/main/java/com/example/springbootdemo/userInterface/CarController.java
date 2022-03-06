@@ -5,14 +5,9 @@ import com.example.springbootdemo.application.CarService;
 import com.example.springbootdemo.userInterface.dto.request.CarRequest;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-//import org.apache.juli.logging.Log;
-//import org.apache.juli.logging.LogFactory;
-
-//import lombok.extern.slf4j.Slf4j;
-////import org.slf4j.Logger;
-////import org.slf4j.LoggerFactory;
 
 import lombok.extern.slf4j.Slf4j;
+import org.apache.logging.log4j.core.config.plugins.validation.constraints.Required;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -21,33 +16,31 @@ import java.util.List;
 
 @RestController
 @Slf4j
+@RequestMapping("/cars")
 public class CarController {
 
     private final CarService carService;
-
-//    Logger log = LoggerFactory.getLogger(CarController.class);
-//    Logger log = LoggerFactory.getLogger(CarController.class);
 
     public CarController(CarService carService) {
         this.carService = carService;
     }
 
-    @GetMapping("/cars")
+    @GetMapping
     public List<Car> getAll() {
         return carService.findAll();
     }
 
-    @GetMapping("/car/{id}")
+    @GetMapping("/{id}")
     public Car getById(@PathVariable Long id) {
         return carService.findById(id);
     }
 
-    @GetMapping("/car")
+    @GetMapping("/color")
     public List<Car> getByColor(@RequestParam("color") String color) {
         return carService.findByColor(color);
     }
 
-    @PostMapping("/car")
+    @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public void addNewCar(@Valid @RequestBody CarRequest carRequest) throws JsonProcessingException {
         ObjectMapper mapper = new ObjectMapper();
