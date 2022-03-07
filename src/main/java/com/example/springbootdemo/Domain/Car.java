@@ -3,10 +3,7 @@ package com.example.springbootdemo.Domain;
 
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Builder
 @Getter
@@ -15,10 +12,12 @@ import javax.persistence.Id;
 @NoArgsConstructor
 
 @Entity
+@Table(name = "cars")
 public class Car {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(name = "carName")
     private String name;
     private String color;
 }
