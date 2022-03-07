@@ -6,7 +6,7 @@ import java.util.List;
 public interface CarService {
     List<Car> findAll();
 
-    void addCar(Car car);
+    void addCar(Long userId, Car car);
 
     Car findById(Long id);
 

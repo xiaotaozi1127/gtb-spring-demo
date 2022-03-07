@@ -47,7 +47,7 @@ public class CarController {
         log.info("start process...");
         log.warn("memory is running out...");
         log.error("process will be terminated...");
-        carService.addCar(
+        carService.addCar(carRequest.getUserId(),
                 Car.builder()
                 .name(carRequest.getName())
                 .id(carRequest.getId())

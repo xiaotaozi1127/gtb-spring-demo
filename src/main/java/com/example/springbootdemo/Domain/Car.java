@@ -20,4 +20,7 @@ public class Car {
     @Column(name = "carName")
     private String name;
     private String color;
+    @ManyToOne(targetEntity = User.class, cascade = CascadeType.PERSIST)
+    @JoinColumn(name = "ref_user_id", referencedColumnName = "id")
+    private User user;
 }

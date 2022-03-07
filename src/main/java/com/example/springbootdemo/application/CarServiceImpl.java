@@ -1,7 +1,9 @@
 package com.example.springbootdemo.application;
 
 import com.example.springbootdemo.Domain.Car;
+import com.example.springbootdemo.Domain.User;
 import com.example.springbootdemo.infrastructure.CarRepository;
+import com.example.springbootdemo.infrastructure.UserRepository;
 import com.example.springbootdemo.userInterface.exception.CarNotFoundException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -14,8 +16,11 @@ public class CarServiceImpl implements CarService {
 
     final CarRepository carRepository;
 
-    public CarServiceImpl(CarRepository carRepository) {
+    final UserRepository userRepository;
+
+    public CarServiceImpl(CarRepository carRepository, UserRepository userRepository) {
         this.carRepository = carRepository;
+        this.userRepository = userRepository;
     }
 
     @Override
@@ -24,8 +29,10 @@ public class CarServiceImpl implements CarService {
     }
 
     @Override
-    public void addCar(Car car) {
+    public void addCar(Long userId, Car car) {
         log.info("====repository class=== {}", carRepository.getClass().getName());
+        User user = userRepository.findById(userId).orElse(null);
+        car.setUser(user);
         carRepository.save(car);
     }
 

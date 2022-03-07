@@ -1,8 +1,10 @@
 package com.example.springbootdemo.userInterface.dto.request;
 
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
@@ -20,6 +22,6 @@ public class CarRequest {
     private String name;
     @NotBlank
     private String color;
-    @JsonIgnore
-    private String invalid;
+    @NotBlank
+    private Long userId;
 }
