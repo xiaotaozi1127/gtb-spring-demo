@@ -46,6 +46,6 @@ public class CarServiceImpl implements CarService {
 
     @Override
     public List<Car> findByColor(String color) {
-        return null;
+        return carRepository.findByColor(color);
     }
 }

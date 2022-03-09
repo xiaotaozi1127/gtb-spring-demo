@@ -23,7 +23,7 @@ public class CarController {
         this.carService = carService;
     }
 
-    @GetMapping
+    @GetMapping("/all")
     public List<Car> getAll() {
         return carService.findAll();
     }
@@ -33,7 +33,7 @@ public class CarController {
         return carService.findById(id);
     }
 
-    @GetMapping("/color")
+    @GetMapping
     public List<Car> getByColor(@RequestParam("color") String color) {
         return carService.findByColor(color);
     }
