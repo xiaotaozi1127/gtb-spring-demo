@@ -44,13 +44,9 @@ public class CarController {
         ObjectMapper mapper = new ObjectMapper();
         String s = mapper.writeValueAsString(carRequest);
         log.info("car request = " + s);
-        log.info("start process...");
-        log.warn("memory is running out...");
-        log.error("process will be terminated...");
         carService.addCar(carRequest.getUserId(),
                 Car.builder()
                 .name(carRequest.getName())
-                .id(carRequest.getId())
                 .color(carRequest.getColor())
                 .build());
     }

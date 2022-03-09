@@ -31,9 +31,11 @@ public class CarServiceImpl implements CarService {
     @Override
     public void addCar(Long userId, Car car) {
         log.info("====repository class=== {}", carRepository.getClass().getName());
-        User user = userRepository.findById(userId).orElse(null);
-        car.setUser(user);
         carRepository.save(car);
+        if (userId != null) {
+            User user = userRepository.findById(userId).orElse(null);
+            car.setUser(user);
+        }
     }
 
     @Override
