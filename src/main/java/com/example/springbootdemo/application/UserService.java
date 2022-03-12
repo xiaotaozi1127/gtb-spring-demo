@@ -10,6 +10,6 @@ public interface UserService {
 
     User findById(Long id);
 
-    void addUser(User user);
+    void addUser(User user, String authority);
 
 }

@@ -9,8 +9,16 @@ import org.springframework.security.core.userdetails.User;
 import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
+import javax.sql.DataSource;
+
 @Configuration
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
+
+    final DataSource dataSource;
+
+    public SecurityConfiguration(DataSource dataSource) {
+        this.dataSource = dataSource;
+    }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
@@ -23,6 +31,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 User.withUsername("user")
                         .password("123")
                         .authorities("ROLE_admin", "read"));
+//        auth.jdbcAuthentication().dataSource(dataSource);
     }
 
     @Bean

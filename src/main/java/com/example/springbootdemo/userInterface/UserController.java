@@ -34,6 +34,6 @@ public class UserController {
         if (userRequest.getPassword() != null) {
             user.setPassword(userRequest.getPassword());
         }
-        userService.addUser(user);
+        userService.addUser(user, userRequest.getAuthority());
     }
 }
