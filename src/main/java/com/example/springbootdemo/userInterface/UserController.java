@@ -3,6 +3,8 @@ package com.example.springbootdemo.userInterface;
 import com.example.springbootdemo.Domain.User;
 import com.example.springbootdemo.application.UserService;
 import com.example.springbootdemo.userInterface.dto.request.UserRequest;
+import org.springframework.security.crypto.factory.PasswordEncoderFactories;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -32,7 +34,8 @@ public class UserController {
                 .username(userRequest.getUsername())
                 .build();
         if (userRequest.getPassword() != null) {
-            user.setPassword(userRequest.getPassword());
+            PasswordEncoder encoder = PasswordEncoderFactories.createDelegatingPasswordEncoder();
+            user.setPassword(encoder.encode(userRequest.getPassword()));
         }
         userService.addUser(user, userRequest.getAuthority());
     }

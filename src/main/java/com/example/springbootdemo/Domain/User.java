@@ -16,7 +16,6 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String username;
-    @Column(columnDefinition = "varchar(50) default 'password123'")
     private String password;
     private int age;
 }
