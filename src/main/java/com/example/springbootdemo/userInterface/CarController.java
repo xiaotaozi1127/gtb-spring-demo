@@ -7,6 +7,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
@@ -41,6 +42,7 @@ public class CarController {
     }
 
     @GetMapping
+    @PreAuthorize("hasRole('admin')")
     public List<Car> getByColor(@RequestParam("color") String color) {
         return carService.findByColor(color);
     }
