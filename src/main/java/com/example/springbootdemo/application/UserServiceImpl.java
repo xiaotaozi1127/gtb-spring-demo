@@ -31,7 +31,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public void addUser(User user, String authority) {
         userRepository.save(user);
-        Authority authority1 = Authority.builder().user(user).authority(authority).build();
+        Authority authority1 = Authority.builder().username(user.getUsername()).authority(authority).build();
         authorityRepository.save(authority1);
     }
 }

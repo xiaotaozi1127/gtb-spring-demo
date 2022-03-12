@@ -34,6 +34,7 @@ public class UserController {
         User user = User.builder()
                 .age(userRequest.getAge())
                 .username(userRequest.getUsername())
+                .enabled(Boolean.TRUE)
                 .build();
         if (userRequest.getPassword() != null) {
             PasswordEncoder encoder = PasswordEncoderFactories.createDelegatingPasswordEncoder();

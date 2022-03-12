@@ -1,6 +1,7 @@
 package com.example.springbootdemo.Domain;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 import javax.persistence.*;
@@ -16,9 +17,9 @@ import javax.persistence.*;
 public class Authority {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @JsonIgnore
     private Long id;
-    @OneToOne(targetEntity = User.class, cascade = CascadeType.PERSIST)
-    @JoinColumn(name = "username", referencedColumnName = "username")
-    private User user;
+    @JsonIgnore
+    private String username;
     private String authority;
 }

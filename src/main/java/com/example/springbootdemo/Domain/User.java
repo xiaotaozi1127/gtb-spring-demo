@@ -4,6 +4,8 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 import javax.persistence.*;
+import java.io.Serializable;
+import java.util.List;
 
 @Getter
 @Setter
@@ -12,12 +14,16 @@ import javax.persistence.*;
 @AllArgsConstructor
 @Entity
 @Table(name = "users")
-public class User {
+public class User implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String username;
     @JsonIgnore
     private String password;
-    private int age;
+    @OneToMany(fetch = FetchType.EAGER, targetEntity = Authority.class, cascade = CascadeType.ALL)
+    @JoinColumn(name = "username", referencedColumnName = "username")
+    private List<Authority> authorityList;
+    private Integer age;
+    private Boolean enabled;
 }

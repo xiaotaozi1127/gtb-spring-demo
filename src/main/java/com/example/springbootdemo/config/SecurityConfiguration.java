@@ -1,25 +1,33 @@
 package com.example.springbootdemo.config;
 
+import com.example.springbootdemo.Domain.Authority;
+import com.example.springbootdemo.Domain.User;
+import com.example.springbootdemo.infrastructure.UserRepository;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
-import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.factory.PasswordEncoderFactories;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
-import javax.sql.DataSource;
+import java.util.stream.Collectors;
+
+import static org.springframework.security.core.userdetails.User.withUsername;
 
 @Configuration
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
-    final DataSource dataSource;
+    final UserRepository userRepository;
 
-    public SecurityConfiguration(DataSource dataSource) {
-        this.dataSource = dataSource;
+    public SecurityConfiguration(UserRepository userRepository) {
+        this.userRepository = userRepository;
     }
 
     @Override
@@ -34,11 +42,21 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .and().httpBasic();
     }
 
-    @Override
-    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.jdbcAuthentication().dataSource(dataSource)
-                .usersByUsernameQuery("select username, password, enabled from users where username = ?")
-                .authoritiesByUsernameQuery("select username, authority from authorities where username = ?");
+    @Bean
+    public UserDetailsService userDetailsService() {
+        return username -> {
+            System.out.println("===========" + username);
+            User user = userRepository.findByUsername(username).orElseThrow(() -> new UsernameNotFoundException(username));
+            System.out.println("========" + user);
+            UserDetails userDetails = withUsername(user.getUsername())
+                    .password(user.getPassword())
+                    .authorities(user.getAuthorityList().stream().map(Authority::getAuthority).map(SimpleGrantedAuthority::new).collect(Collectors.toList()))
+                    .disabled(!user.getEnabled())
+                    .build();
+            System.out.println("=========" + userDetails);
+            return userDetails;
+        };
+
     }
 
     @Bean

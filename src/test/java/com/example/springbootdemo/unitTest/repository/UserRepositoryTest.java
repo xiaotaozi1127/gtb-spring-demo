@@ -19,14 +19,14 @@ public class UserRepositoryTest {
 
     @Test
     public void should_save_user_successfully_in_db() {
-        User savedUser = User.builder().name("name").age(18).build();
+        User savedUser = User.builder().username("name").age(18).build();
         savedUser = userRepository.save(savedUser);
 
         Optional<User> optionalUser = userRepository.findById(savedUser.getId());
 
         Assertions.assertTrue(optionalUser.isPresent());
         Assertions.assertEquals(savedUser.getAge(), 18);
-        Assertions.assertEquals(savedUser.getName(), "name");
+        Assertions.assertEquals(savedUser.getUsername(), "name");
     }
 
 }
