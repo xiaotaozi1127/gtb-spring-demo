@@ -26,7 +26,7 @@ public class UserController {
     }
 
     @PostMapping("/users")
-    public void addUser(@RequestBody UserRequest user) {
-        userService.addUser(User.builder().age(user.getAge()).name(user.getName()).build());
+    public void addUser(@RequestBody UserRequest userRequest) {
+        userService.addUser(User.builder().age(userRequest.getAge()).username(userRequest.getUsername()).build());
     }
 }

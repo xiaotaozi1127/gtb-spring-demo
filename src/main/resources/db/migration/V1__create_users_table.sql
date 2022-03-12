@@ -1,5 +1,5 @@
-CREATE TABLE car_users (
+CREATE TABLE users (
     id int not null auto_increment primary key,
     age int not null ,
-    user_name varchar(20)
+    username varchar(20) not null
 )

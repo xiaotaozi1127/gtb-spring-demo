@@ -17,7 +17,6 @@ public class Car {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(name = "carName")
     private String name;
     private String color;
     @ManyToOne(targetEntity = User.class, cascade = CascadeType.PERSIST)

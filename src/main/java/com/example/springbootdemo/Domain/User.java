@@ -10,12 +10,11 @@ import javax.persistence.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "car_users")
+@Table(name = "users")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(name = "userName")
-    private String name;
+    private String username;
     private int age;
 }

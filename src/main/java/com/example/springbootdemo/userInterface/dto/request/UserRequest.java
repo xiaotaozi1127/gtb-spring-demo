@@ -9,5 +9,5 @@ import lombok.Setter;
 @Setter
 public class UserRequest {
     private int age;
-    private String name;
+    private String username;
 }
