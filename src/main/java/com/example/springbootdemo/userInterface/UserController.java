@@ -27,6 +27,13 @@ public class UserController {
 
     @PostMapping("/users")
     public void addUser(@RequestBody UserRequest userRequest) {
-        userService.addUser(User.builder().age(userRequest.getAge()).username(userRequest.getUsername()).build());
+        User user = User.builder()
+                .age(userRequest.getAge())
+                .username(userRequest.getUsername())
+                .build();
+        if (userRequest.getPassword() != null) {
+            user.setPassword(userRequest.getPassword());
+        }
+        userService.addUser(user);
     }
 }
