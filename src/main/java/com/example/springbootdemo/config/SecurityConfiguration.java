@@ -26,7 +26,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
         http.authorizeRequests()
                 .mvcMatchers(HttpMethod.POST, "/users").permitAll()
-                .mvcMatchers(HttpMethod.GET, "/users").hasRole("USER")
+                .mvcMatchers(HttpMethod.GET, "/users").hasRole("admin")
+                .mvcMatchers(HttpMethod.POST, "/cars").hasRole("admin")
                 .anyRequest().authenticated()
                 .and().httpBasic();
     }

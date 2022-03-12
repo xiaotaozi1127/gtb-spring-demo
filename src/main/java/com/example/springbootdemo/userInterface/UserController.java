@@ -3,6 +3,7 @@ package com.example.springbootdemo.userInterface;
 import com.example.springbootdemo.Domain.User;
 import com.example.springbootdemo.application.UserService;
 import com.example.springbootdemo.userInterface.dto.request.UserRequest;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.crypto.factory.PasswordEncoderFactories;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
@@ -23,6 +24,7 @@ public class UserController {
     }
 
     @GetMapping("/users/{id}")
+    @PreAuthorize("hasRole('user')")
     public User getUserById(@PathVariable("id") Long userId) {
         return userService.findById(userId);
     }
