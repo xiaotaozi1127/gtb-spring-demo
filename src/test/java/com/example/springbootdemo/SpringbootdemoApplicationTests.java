@@ -17,8 +17,18 @@ class SpringbootdemoApplicationTests {
     @Test
     void should_create_car_success() {
         var responseEntity =
-                restTemplate.postForEntity("/cars",
+                restTemplate.withBasicAuth("admin", "password123")
+                        .postForEntity("/cars",
                         CarRequest.builder().name("volv").color("red").build(), CarRequest.class);
         Assertions.assertEquals(HttpStatus.CREATED, responseEntity.getStatusCode());
+    }
+
+    @Test
+    void should_create_car_failed_with_forbidden_error_for_normal_user() {
+        var responseEntity =
+                restTemplate.withBasicAuth("user", "password123")
+                        .postForEntity("/cars",
+                                CarRequest.builder().name("volv").color("red").build(), CarRequest.class);
+        Assertions.assertEquals(HttpStatus.FORBIDDEN, responseEntity.getStatusCode());
     }
 }

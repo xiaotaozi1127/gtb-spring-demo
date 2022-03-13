@@ -19,7 +19,7 @@ public class UserRepositoryTest {
 
     @Test
     public void should_save_user_successfully_in_db() {
-        User savedUser = User.builder().username("name").age(18).build();
+        User savedUser = User.builder().username("name").age(18).password("password").enabled(true).build();
         savedUser = userRepository.save(savedUser);
 
         Optional<User> optionalUser = userRepository.findById(savedUser.getId());
