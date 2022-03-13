@@ -1,4 +1,4 @@
-package com.example.springbootdemo;
+package com.example.springbootdemo.integrationTest;
 
 import com.example.springbootdemo.userInterface.dto.request.CarRequest;
 import org.junit.jupiter.api.Assertions;
@@ -9,7 +9,7 @@ import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.http.HttpStatus;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-class SpringbootdemoApplicationTests {
+class ApplicationTestsUsingSpringBootTest {
 
     @Autowired
     private TestRestTemplate restTemplate;
